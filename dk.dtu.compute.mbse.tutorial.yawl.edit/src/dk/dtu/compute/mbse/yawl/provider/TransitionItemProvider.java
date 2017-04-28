@@ -147,16 +147,6 @@ public class TransitionItemProvider extends org.pnml.tools.epnk.pnmlcoremodel.pr
 
 		newChildDescriptors.add
 			(createChildParameter
-				(YawlPackage.Literals.TRANSITION__SPLIT_TYPE,
-				 YawlFactory.eINSTANCE.createTransitionType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(YawlPackage.Literals.TRANSITION__JOIN_TYPE,
-				 YawlFactory.eINSTANCE.createTransitionType()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(YawlPackage.Literals.TRANSITION__JOIN_TYPE,
 				 YawlFactory.eINSTANCE.createTransitionType()));
 	}

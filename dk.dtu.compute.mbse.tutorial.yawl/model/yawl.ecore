@@ -33,7 +33,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArcType" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Attribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ArcType" eType="#//AType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="#//AType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AType">
     <eLiterals name="NORMAL"/>

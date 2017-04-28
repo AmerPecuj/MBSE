@@ -507,13 +507,13 @@ public interface YawlPackage extends EPackage {
 	int ARC_TYPE__UNKNOWN = PnmlcoremodelPackage.ATTRIBUTE__UNKNOWN;
 
 	/**
-	 * The feature id for the '<em><b>Arc Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_TYPE__ARC_TYPE = PnmlcoremodelPackage.ATTRIBUTE_FEATURE_COUNT + 0;
+	int ARC_TYPE__TEXT = PnmlcoremodelPackage.ATTRIBUTE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Arc Type</em>' class.
@@ -693,15 +693,15 @@ public interface YawlPackage extends EPackage {
 	EClass getArcType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link dk.dtu.compute.mbse.yawl.ArcType#getArcType <em>Arc Type</em>}'.
+	 * Returns the meta object for the attribute '{@link dk.dtu.compute.mbse.yawl.ArcType#getText <em>Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Arc Type</em>'.
-	 * @see dk.dtu.compute.mbse.yawl.ArcType#getArcType()
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see dk.dtu.compute.mbse.yawl.ArcType#getText()
 	 * @see #getArcType()
 	 * @generated
 	 */
-	EAttribute getArcType_ArcType();
+	EAttribute getArcType_Text();
 
 	/**
 	 * Returns the meta object for enum '{@link dk.dtu.compute.mbse.yawl.PType <em>PType</em>}'.
@@ -874,12 +874,12 @@ public interface YawlPackage extends EPackage {
 		EClass ARC_TYPE = eINSTANCE.getArcType();
 
 		/**
-		 * The meta object literal for the '<em><b>Arc Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ARC_TYPE__ARC_TYPE = eINSTANCE.getArcType_ArcType();
+		EAttribute ARC_TYPE__TEXT = eINSTANCE.getArcType_Text();
 
 		/**
 		 * The meta object literal for the '{@link dk.dtu.compute.mbse.yawl.PType <em>PType</em>}' enum.

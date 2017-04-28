@@ -142,11 +142,6 @@ public class PlaceItemProvider extends org.pnml.tools.epnk.pnmlcoremodel.provide
 			(createChildParameter
 				(YawlPackage.Literals.PLACE__PLACETYPE,
 				 YawlFactory.eINSTANCE.createPlaceType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(YawlPackage.Literals.PLACE__PLACETYPE,
-				 YawlFactory.eINSTANCE.createPlaceType()));
 	}
 
 	/**

@@ -13,7 +13,7 @@ import org.pnml.tools.epnk.pnmlcoremodel.Attribute;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link dk.dtu.compute.mbse.yawl.ArcType#getArcType <em>Arc Type</em>}</li>
+ *   <li>{@link dk.dtu.compute.mbse.yawl.ArcType#getText <em>Text</em>}</li>
  * </ul>
  *
  * @see dk.dtu.compute.mbse.yawl.YawlPackage#getArcType()
@@ -22,32 +22,32 @@ import org.pnml.tools.epnk.pnmlcoremodel.Attribute;
  */
 public interface ArcType extends Attribute {
 	/**
-	 * Returns the value of the '<em><b>Arc Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>Text</b></em>' attribute.
 	 * The literals are from the enumeration {@link dk.dtu.compute.mbse.yawl.AType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Arc Type</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Text</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Arc Type</em>' attribute.
+	 * @return the value of the '<em>Text</em>' attribute.
 	 * @see dk.dtu.compute.mbse.yawl.AType
-	 * @see #setArcType(AType)
-	 * @see dk.dtu.compute.mbse.yawl.YawlPackage#getArcType_ArcType()
+	 * @see #setText(AType)
+	 * @see dk.dtu.compute.mbse.yawl.YawlPackage#getArcType_Text()
 	 * @model
 	 * @generated
 	 */
-	AType getArcType();
+	AType getText();
 
 	/**
-	 * Sets the value of the '{@link dk.dtu.compute.mbse.yawl.ArcType#getArcType <em>Arc Type</em>}' attribute.
+	 * Sets the value of the '{@link dk.dtu.compute.mbse.yawl.ArcType#getText <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Arc Type</em>' attribute.
+	 * @param value the new value of the '<em>Text</em>' attribute.
 	 * @see dk.dtu.compute.mbse.yawl.AType
-	 * @see #getArcType()
+	 * @see #getText()
 	 * @generated
 	 */
-	void setArcType(AType value);
+	void setText(AType value);
 
 } // ArcType

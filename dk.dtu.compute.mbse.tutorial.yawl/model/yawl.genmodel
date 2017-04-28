@@ -40,44 +40,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yawl.ecore#//Arc/arctype"/>
     </genClasses>
     <genClasses ecoreClass="yawl.ecore#//ArcType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yawl.ecore#//ArcType/ArcType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yawl.ecore#//ArcType/text"/>
     </genClasses>
-    <nestedGenPackages prefix="Yawl" basePackage="dk.dtu.compute.mbse" disposableProviderFactory="true"
-        ecorePackage="yawl.ecore#/">
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="yawl.ecore#//PType">
-        <genEnumLiterals ecoreEnumLiteral="yawl.ecore#//PType/NORMAL"/>
-        <genEnumLiterals ecoreEnumLiteral="yawl.ecore#//PType/START"/>
-        <genEnumLiterals ecoreEnumLiteral="yawl.ecore#//PType/FINISH"/>
-      </genEnums>
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="yawl.ecore#//TType">
-        <genEnumLiterals ecoreEnumLiteral="yawl.ecore#//TType/AND"/>
-        <genEnumLiterals ecoreEnumLiteral="yawl.ecore#//TType/XOR"/>
-        <genEnumLiterals ecoreEnumLiteral="yawl.ecore#//TType/OR"/>
-      </genEnums>
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="yawl.ecore#//AType">
-        <genEnumLiterals ecoreEnumLiteral="yawl.ecore#//AType/NORMAL"/>
-        <genEnumLiterals ecoreEnumLiteral="yawl.ecore#//AType/RESET"/>
-      </genEnums>
-      <genClasses ecoreClass="yawl.ecore#//YAWLNet"/>
-      <genClasses ecoreClass="yawl.ecore#//Place">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yawl.ecore#//Place/placetype"/>
-      </genClasses>
-      <genClasses ecoreClass="yawl.ecore#//PlaceType">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yawl.ecore#//PlaceType/text"/>
-      </genClasses>
-      <genClasses ecoreClass="yawl.ecore#//Transition">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yawl.ecore#//Transition/splitType"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yawl.ecore#//Transition/joinType"/>
-      </genClasses>
-      <genClasses ecoreClass="yawl.ecore#//TransitionType">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yawl.ecore#//TransitionType/text"/>
-      </genClasses>
-      <genClasses ecoreClass="yawl.ecore#//Arc">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yawl.ecore#//Arc/arctype"/>
-      </genClasses>
-      <genClasses ecoreClass="yawl.ecore#//ArcType">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yawl.ecore#//ArcType/ArcType"/>
-      </genClasses>
-    </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

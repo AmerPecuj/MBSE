@@ -22,31 +22,31 @@ import org.pnml.tools.epnk.pnmlcoremodel.impl.AttributeImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link dk.dtu.compute.mbse.yawl.impl.ArcTypeImpl#getArcType <em>Arc Type</em>}</li>
+ *   <li>{@link dk.dtu.compute.mbse.yawl.impl.ArcTypeImpl#getText <em>Text</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ArcTypeImpl extends AttributeImpl implements ArcType {
 	/**
-	 * The default value of the '{@link #getArcType() <em>Arc Type</em>}' attribute.
+	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getArcType()
+	 * @see #getText()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final AType ARC_TYPE_EDEFAULT = AType.NORMAL;
+	protected static final AType TEXT_EDEFAULT = AType.NORMAL;
 
 	/**
-	 * The cached value of the '{@link #getArcType() <em>Arc Type</em>}' attribute.
+	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getArcType()
+	 * @see #getText()
 	 * @generated
 	 * @ordered
 	 */
-	protected AType arcType = ARC_TYPE_EDEFAULT;
+	protected AType text = TEXT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -72,8 +72,8 @@ public class ArcTypeImpl extends AttributeImpl implements ArcType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AType getArcType() {
-		return arcType;
+	public AType getText() {
+		return text;
 	}
 
 	/**
@@ -81,11 +81,11 @@ public class ArcTypeImpl extends AttributeImpl implements ArcType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setArcType(AType newArcType) {
-		AType oldArcType = arcType;
-		arcType = newArcType == null ? ARC_TYPE_EDEFAULT : newArcType;
+	public void setText(AType newText) {
+		AType oldText = text;
+		text = newText == null ? TEXT_EDEFAULT : newText;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, YawlPackage.ARC_TYPE__ARC_TYPE, oldArcType, arcType));
+			eNotify(new ENotificationImpl(this, Notification.SET, YawlPackage.ARC_TYPE__TEXT, oldText, text));
 	}
 
 	/**
@@ -96,8 +96,8 @@ public class ArcTypeImpl extends AttributeImpl implements ArcType {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case YawlPackage.ARC_TYPE__ARC_TYPE:
-				return getArcType();
+			case YawlPackage.ARC_TYPE__TEXT:
+				return getText();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,8 +110,8 @@ public class ArcTypeImpl extends AttributeImpl implements ArcType {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case YawlPackage.ARC_TYPE__ARC_TYPE:
-				setArcType((AType)newValue);
+			case YawlPackage.ARC_TYPE__TEXT:
+				setText((AType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -125,8 +125,8 @@ public class ArcTypeImpl extends AttributeImpl implements ArcType {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case YawlPackage.ARC_TYPE__ARC_TYPE:
-				setArcType(ARC_TYPE_EDEFAULT);
+			case YawlPackage.ARC_TYPE__TEXT:
+				setText(TEXT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -140,8 +140,8 @@ public class ArcTypeImpl extends AttributeImpl implements ArcType {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case YawlPackage.ARC_TYPE__ARC_TYPE:
-				return arcType != ARC_TYPE_EDEFAULT;
+			case YawlPackage.ARC_TYPE__TEXT:
+				return text != TEXT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -156,8 +156,8 @@ public class ArcTypeImpl extends AttributeImpl implements ArcType {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (ArcType: ");
-		result.append(arcType);
+		result.append(" (text: ");
+		result.append(text);
 		result.append(')');
 		return result.toString();
 	}

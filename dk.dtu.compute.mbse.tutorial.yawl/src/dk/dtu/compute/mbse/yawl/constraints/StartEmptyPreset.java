@@ -7,7 +7,9 @@ import org.eclipse.emf.validation.IValidationContext;
 import org.pnml.tools.epnk.helpers.FlatAccess;
 import org.pnml.tools.epnk.helpers.NetFunctions;
 
+import dk.dtu.compute.mbse.yawl.PType;
 import dk.dtu.compute.mbse.yawl.Place;
+import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
 
 public class StartEmptyPreset extends AbstractModelConstraint{
 
@@ -16,8 +18,10 @@ public class StartEmptyPreset extends AbstractModelConstraint{
 		EObject object = ctx.getTarget();
 		if(object instanceof Place){
 			FlatAccess fA =FlatAccess.getFlatAccess(NetFunctions.getPetriNet(object));
-			if(fA.getIn((Place) object).size()!=0){
-				return ctx.createFailureStatus(new Object[] {object});
+			if(YAWLFunctions.getTypePlace((Place) object).equals(PType.START)){
+				if(fA.getIn((Place) object).size()!=0){
+					return ctx.createFailureStatus(new Object[] {object});
+				}
 			}
 		}
 		return ctx.createSuccessStatus();

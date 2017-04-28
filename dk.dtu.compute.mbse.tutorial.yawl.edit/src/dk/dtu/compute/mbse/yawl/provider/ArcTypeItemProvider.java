@@ -50,25 +50,25 @@ public class ArcTypeItemProvider extends AttributeItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addArcTypePropertyDescriptor(object);
+			addTextPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Arc Type feature.
+	 * This adds a property descriptor for the Text feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addArcTypePropertyDescriptor(Object object) {
+	protected void addTextPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ArcType_ArcType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ArcType_ArcType_feature", "_UI_ArcType_type"),
-				 YawlPackage.Literals.ARC_TYPE__ARC_TYPE,
+				 getString("_UI_ArcType_text_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ArcType_text_feature", "_UI_ArcType_type"),
+				 YawlPackage.Literals.ARC_TYPE__TEXT,
 				 true,
 				 false,
 				 false,
@@ -96,7 +96,7 @@ public class ArcTypeItemProvider extends AttributeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		AType labelValue = ((ArcType)object).getArcType();
+		AType labelValue = ((ArcType)object).getText();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ArcType_type") :
@@ -116,7 +116,7 @@ public class ArcTypeItemProvider extends AttributeItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ArcType.class)) {
-			case YawlPackage.ARC_TYPE__ARC_TYPE:
+			case YawlPackage.ARC_TYPE__TEXT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

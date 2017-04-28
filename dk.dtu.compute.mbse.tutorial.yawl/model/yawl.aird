@@ -1338,9 +1338,9 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_jvXXIAr5Eeecd_MItf6IXA" name="ArcType : AType = NORMAL" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="yawl.ecore#//ArcType/ArcType"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="yawl.ecore#//ArcType/ArcType"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_jvXXIAr5Eeecd_MItf6IXA" name="text : AType = NORMAL" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="yawl.ecore#//ArcType/text"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="yawl.ecore#//ArcType/text"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_ovlIsAr5Eeecd_MItf6IXA" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
           </ownedStyle>

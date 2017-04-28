@@ -142,11 +142,6 @@ public class ArcItemProvider extends org.pnml.tools.epnk.pnmlcoremodel.provider.
 			(createChildParameter
 				(YawlPackage.Literals.ARC__ARCTYPE,
 				 YawlFactory.eINSTANCE.createArcType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(YawlPackage.Literals.ARC__ARCTYPE,
-				 YawlFactory.eINSTANCE.createArcType()));
 	}
 
 	/**

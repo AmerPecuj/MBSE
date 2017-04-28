@@ -6,13 +6,13 @@
 
 <plugin>
 
-	<extension point="org.eclipse.emf.ecore.generated_package">
-		<!-- @generated yawl -->
-		<package
-			uri="http://se.compute.dtu.dk/mbse/yawl"
-			class="dk.dtu.compute.mbse.yawl.YawlPackage"
-		genModel="model/yawl.genmodel"/>
-	</extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated yawl -->
+      <package
+            uri="http://se.compute.dtu.dk/mbse/yawl"
+            class="dk.dtu.compute.mbse.yawl.YawlPackage"
+            genModel="model/yawl.genmodel"/>
+   </extension>
 
 	<extension
 		id="dk.dtu.compute.mbse.yawl.pntd"
