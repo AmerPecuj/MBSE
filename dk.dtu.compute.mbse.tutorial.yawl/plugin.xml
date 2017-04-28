@@ -108,7 +108,7 @@
             		name="Start place has empty preset"
             		id="dk.dtu.compute.mbse.yawl.validation.start-condition-has-empty-preset"
             		statusCode="403">
-            		<target class="Condition:http://se.compute.dtu.dk/mbse/yawl"/>
+            		<target class="Place:http://se.compute.dtu.dk/mbse/yawl"/>
             		<description>
             			A start condition must have an empty preset.
             		</description>
