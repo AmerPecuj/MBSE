@@ -1,0 +1,7 @@
+# Tracing options for the dk.dtu.compute.mbse.petrinet.diagram plug-in
+
+# Common issues
+dk.dtu.compute.mbse.petrinet.diagram/debug=false
+
+# Visual IDs
+dk.dtu.compute.mbse.petrinet.diagram/debug/visualID=false
