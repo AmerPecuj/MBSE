@@ -8,10 +8,10 @@ import org.eclipse.emf.validation.AbstractModelConstraint;
 import org.eclipse.emf.validation.IValidationContext;
 import org.pnml.tools.epnk.helpers.FlatAccess;
 import org.pnml.tools.epnk.helpers.NetFunctions;
+import org.pnml.tools.epnk.tutorials.app.technical.helpers.ArcType;
 import org.pnml.tools.epnk.tutorials.app.technical.helpers.TechnicalNetTypeFunctions;
 
 import dk.dtu.compute.mbse.yawl.Arc;
-import dk.dtu.compute.mbse.yawl.ArcType;
 
 public class NoDuplicateArcs extends AbstractModelConstraint{
 
@@ -25,7 +25,7 @@ public class NoDuplicateArcs extends AbstractModelConstraint{
 			Node target = (Node) NetFunctions.resolve(arc.getTarget());
 			FlatAccess flatAccess =
 					FlatAccess.getFlatAccess(NetFunctions.getPetriNet(arc));
-			if ((arcType == ArcType.INHIBITOR ||arcType == ArcType.READ)) && source != null && flatAccess != null) {
+			if ((arcType == ArcType.NORMAL ||arcType == ArcType.READ) && source != null && flatAccess != null) {
 				for (org.pnml.tools.epnk.pnmlcoremodel.Arc other:
 					flatAccess.getOut((org.pnml.tools.epnk.pnmlcoremodel.Node) source)) {
 					if (other != arc) {
