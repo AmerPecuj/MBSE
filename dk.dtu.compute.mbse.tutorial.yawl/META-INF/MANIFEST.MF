@@ -15,4 +15,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.pnml.tools.epnk;visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Import-Package: org.eclipse.emf.validation
+Import-Package: org.eclipse.emf.validation,
+ org.pnml.tools.epnk.tutorials.app.technical.helpers
