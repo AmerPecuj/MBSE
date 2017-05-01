@@ -20,7 +20,7 @@ public class NoDuplicateArcs extends AbstractModelConstraint{
 		EObject object = ctx.getTarget();
 		if(object instanceof Arc){
 			Arc arc = (Arc) object;
-			org.pnml.tools.epnk.tutorials.app.technical.helpers.ArcType arcType = TechnicalNetTypeFunctions.getArcType(arc);
+			ArcType arcType = TechnicalNetTypeFunctions.getArcType(arc);
 			Node source = (Node) NetFunctions.resolve(arc.getSource());
 			Node target = (Node) NetFunctions.resolve(arc.getTarget());
 			FlatAccess flatAccess =
