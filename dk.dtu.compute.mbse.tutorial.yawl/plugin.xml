@@ -118,7 +118,7 @@
     			</constraint>
     			<constraint
     				lang="Java"
-            		class="dk.dtu.compute.mbse.yawl.constraints.EndEmptyPreset"
+            		class="dk.dtu.compute.mbse.yawl.constraints.EndEmptyPostset"
             		severity="ERROR"
             		mode="Batch"
             		name="End place has empty preset"

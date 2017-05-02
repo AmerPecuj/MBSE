@@ -6,16 +6,16 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.validation.AbstractModelConstraint;
 import org.eclipse.emf.validation.IValidationContext;
-import org.osgi.service.condpermadmin.Condition;
-import org.pnml.tools.epnk.pnmlcoremodel.PetriNet;
 
 import dk.dtu.compute.mbse.yawl.PType;
 import dk.dtu.compute.mbse.yawl.Place;
-import dk.dtu.compute.mbse.yawl.YAWLNet;
 import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
+import org.osgi.service.condpermadmin.Condition;
+import org.pnml.tools.epnk.pnmlcoremodel.PetriNet;
+import dk.dtu.compute.mbse.yawl.YAWLNet;
 
-public class StartEndConditions extends AbstractModelConstraint{
-
+public class StartEndConditions extends AbstractModelConstraint {
+	
 	@Override
 	public IStatus validate(IValidationContext ctx) {
 		EObject object = ctx.getTarget();
@@ -50,5 +50,4 @@ public class StartEndConditions extends AbstractModelConstraint{
 		}
 		return ctx.createSuccessStatus();
 	}
-
 }

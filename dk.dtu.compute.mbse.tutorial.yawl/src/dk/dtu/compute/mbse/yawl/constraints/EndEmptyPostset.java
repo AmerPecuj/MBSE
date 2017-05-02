@@ -4,12 +4,12 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.validation.AbstractModelConstraint;
 import org.eclipse.emf.validation.IValidationContext;
-import org.pnml.tools.epnk.helpers.FlatAccess;
-import org.pnml.tools.epnk.helpers.NetFunctions;
 
 import dk.dtu.compute.mbse.yawl.PType;
 import dk.dtu.compute.mbse.yawl.Place;
 import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
+import org.pnml.tools.epnk.helpers.FlatAccess;
+import org.pnml.tools.epnk.helpers.NetFunctions;
 
 public class EndEmptyPostset extends AbstractModelConstraint{
 

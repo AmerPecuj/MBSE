@@ -1,10 +1,6 @@
 package dk.dtu.compute.mbse.yawl.functions;
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.pnml.tools.epnk.pnmlcoremodel.Arc;
-import org.pnml.tools.epnk.pnmlcoremodel.Node;
 import org.pnml.tools.epnk.pnmlcoremodel.Place;
 import dk.dtu.compute.mbse.yawl.AType;
 import dk.dtu.compute.mbse.yawl.ArcType;
