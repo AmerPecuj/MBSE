@@ -9,9 +9,11 @@ import org.pnml.tools.epnk.gmf.extensions.graphics.IArcFigure;
 import org.pnml.tools.epnk.gmf.extensions.graphics.IUpdateableFigure;
 import org.pnml.tools.epnk.pnmlcoremodel.Arc;
 import org.pnml.tools.epnk.pnmlcoremodel.Place;
+import org.pnml.tools.epnk.pnmlcoremodel.Transition;
 
 import dk.dtu.compute.mbse.tutorial.yawl.graphics.figures.YAWLArcFigure;
-import dk.dtu.compute.mbse.tutorial.yawl.graphics.figures.YAWLConditionFigure;
+import dk.dtu.compute.mbse.tutorial.yawl.graphics.figures.YAWLPlaceFigure;
+import dk.dtu.compute.mbse.tutorial.yawl.graphics.figures.YAWLTransitionFigure;
 import dk.dtu.compute.mbse.yawl.YawlPackage;
 
 /**
@@ -41,6 +43,7 @@ public class YAWLGraphics extends GraphicalExtension {
 		if (netType.equals(YawlPackage.eINSTANCE.getYAWLNet())) {
 			results.add(YawlPackage.eINSTANCE.getArc());
 			results.add(YawlPackage.eINSTANCE.getPlace());
+			results.add(YawlPackage.eINSTANCE.getTransition());
 			// No graphical extension for places
 			// results.add((TechnicalPackage.eINSTANCE.getPlace());
 			// results.add(TechnicalPackage.eINSTANCE.getTransition());
@@ -59,19 +62,16 @@ public class YAWLGraphics extends GraphicalExtension {
 	@Override
 	public IUpdateableFigure createPlaceFigure(Place place) {
 		if (place instanceof dk.dtu.compute.mbse.yawl.Place) {
-			return new YAWLConditionFigure(place);
+			return new YAWLPlaceFigure(place);
 		}
 		return null;
 	}
 	
-	/*
 	@Override
 	public IUpdateableFigure createTransitionFigure(Transition transition) {
-		if (transition instanceof org.pnml.tools.epnk.tutorials.app.technical.Transition) {
-			return new TechnicalNetTypeTransitionFigure(transition);
+		if (transition instanceof dk.dtu.compute.mbse.yawl.Transition) {
+			return new YAWLTransitionFigure(transition);
 		}
 		return null;
 	}
-	*/
-
 }

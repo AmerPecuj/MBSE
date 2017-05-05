@@ -2,10 +2,14 @@ package dk.dtu.compute.mbse.yawl.functions;
 
 import org.pnml.tools.epnk.pnmlcoremodel.Arc;
 import org.pnml.tools.epnk.pnmlcoremodel.Place;
+import org.pnml.tools.epnk.pnmlcoremodel.Transition;
+
 import dk.dtu.compute.mbse.yawl.AType;
 import dk.dtu.compute.mbse.yawl.ArcType;
 import dk.dtu.compute.mbse.yawl.PType;
 import dk.dtu.compute.mbse.yawl.PlaceType;
+import dk.dtu.compute.mbse.yawl.TType;
+import dk.dtu.compute.mbse.yawl.TransitionType;
 import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
 
 public class YAWLFunctions {
@@ -41,11 +45,29 @@ public class YAWLFunctions {
 		return AType.NORMAL;
 	}
 	
+	public static TType[] getTypeTransition(Transition transition) {
+		TType[] types=new TType[2];
+		types[0]=TType.AND;
+		types[1]=TType.AND;
+		if (transition instanceof Transition) {
+			Transition YAWLTransition = (Transition) transition;
+			if(((dk.dtu.compute.mbse.yawl.Transition) YAWLTransition).getJoinType() != null) {
+				TransitionType type = ((dk.dtu.compute.mbse.yawl.Transition) YAWLTransition).getJoinType();
+				if(type.getText().equals(TType.OR)) types[0]=TType.OR;
+				else if(type.getText().equals(TType.XOR)) types[0]=TType.XOR;
+			}
+			if(((dk.dtu.compute.mbse.yawl.Transition) YAWLTransition).getSplitType() != null) {
+				TransitionType type = ((dk.dtu.compute.mbse.yawl.Transition) YAWLTransition).getSplitType();
+				if(type.getText().equals(TType.OR)) types[1]=TType.OR;
+				else if(type.getText().equals(TType.XOR)) types[1]=TType.XOR;
+			}
+			return types;
+		}
+		else return types;
+	}
+	
 	public static boolean isResetArc(Arc arc) {
 		return getTypeArc(arc).equals(AType.RESET);
 	
 	}
-
-	
 }
-
