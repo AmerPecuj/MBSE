@@ -31,7 +31,7 @@ public class YAWLFunctions {
 			Arc YAWLArc = (Arc) arc;
 			ArcType type = ((dk.dtu.compute.mbse.yawl.Arc) YAWLArc).getArctype();
 			if (type != null) {
-				if (((PlaceType) type).getText().equals(AType.RESET)) {
+				if (((ArcType) type).getText().equals(AType.RESET)) {
 					return AType.RESET;
 				}
 			} else {

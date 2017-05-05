@@ -80,7 +80,7 @@
                  or
                  ( self.source.oclIsKindOf(pnmlcoremodel::TransitionNode) and
                    self.target.oclIsKindOf(pnmlcoremodel::PlaceNode) and
-                   self.type->size() = 0 )
+                   self.arctype->size() = 0 )
                ]]>
             </constraint>
             
@@ -124,7 +124,7 @@
             		name="End place has empty preset"
             		id="dk.dtu.compute.mbse.yawl.validation.end-condition-has-empty-preset"
             		statusCode="404">
-            		<target class="Condition:http://se.compute.dtu.dk/mbse/yawl"/>
+            		<target class="Place:http://se.compute.dtu.dk/mbse/yawl"/>
             		<description>
             			A End condition must have an empty preset.
             		</description>

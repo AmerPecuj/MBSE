@@ -10,7 +10,6 @@ import org.eclipse.emf.validation.IValidationContext;
 import dk.dtu.compute.mbse.yawl.PType;
 import dk.dtu.compute.mbse.yawl.Place;
 import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
-import org.osgi.service.condpermadmin.Condition;
 import org.pnml.tools.epnk.pnmlcoremodel.PetriNet;
 import dk.dtu.compute.mbse.yawl.YAWLNet;
 
@@ -27,7 +26,7 @@ public class StartEndConditions extends AbstractModelConstraint {
 				Iterator<EObject> iterator = container.eAllContents();
 				while(iterator.hasNext()){
 					EObject content = iterator.next();
-					if(content instanceof Condition){
+					if(content instanceof Place){
 						Place condition = (Place) content;
 						PType type = YAWLFunctions.getTypePlace(condition);
 						if(type.equals(PType.START)){
