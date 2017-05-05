@@ -51,22 +51,7 @@ public class YAWLTransitionFigure extends TransitionFigure {
 		Rectangle rectangle = this.getClientArea();
 		int w = rectangle.width/3;
 		int h = rectangle.height/3;
-		/*
-		graphics.pushState();
-		Display display = Display.getCurrent();
-		Color green = display.getSystemColor(SWT.COLOR_GREEN);
-		graphics.setBackgroundColor(green);
-		graphics.setLineWidth(1);
-		int x1=rectangle.x+w+1;
-		int y1=rectangle.y+h;
-		int x2=rectangle.x+2*w+2;
-		int y2=rectangle.y+rectangle.height/2;
-		int x3=x1;
-		int y3=rectangle.y+2*h;
-		graphics.fillPolygon(new int[]{x1,y1, x2,y2, x3,y3});
-		graphics.drawPolygon(new int[]{x1,y1, x2,y2, x3,y3});
-		graphics.popState();
-		/*/
+		
 		graphics.pushState();
 		graphics.setLineWidth(2);
 		if(type[0]==TType.XOR) {
@@ -85,7 +70,7 @@ public class YAWLTransitionFigure extends TransitionFigure {
 			});
 			graphics.drawLine(rectangle.x+w, rectangle.y, rectangle.x+w, rectangle.y+rectangle.height);
 		}
-		else {
+		else if(type[0]==TType.AND) {
 			graphics.drawLine(rectangle.x+w, rectangle.y, rectangle.x+w, rectangle.y+rectangle.height);
 			graphics.drawLine(rectangle.x, rectangle.y, rectangle.x+w, rectangle.y+rectangle.height/2);
 			graphics.drawLine(rectangle.x+w, rectangle.y+rectangle.height/2, rectangle.x, rectangle.y+rectangle.height);
@@ -107,12 +92,11 @@ public class YAWLTransitionFigure extends TransitionFigure {
 			});
 			graphics.drawLine(rectangle.x+w*2, rectangle.y, rectangle.x+w*2, rectangle.y+rectangle.height);
 		}
-		else {
+		else if(type[1]==TType.AND) {
 			graphics.drawLine(rectangle.x+w*2, rectangle.y, rectangle.x+w*2, rectangle.y+rectangle.height);
 			graphics.drawLine(rectangle.x+rectangle.width, rectangle.y, rectangle.x+w*2, rectangle.y+rectangle.height/2);
 			graphics.drawLine(rectangle.x+w*2, rectangle.y+rectangle.height/2, rectangle.x+rectangle.width, rectangle.y+rectangle.height);
 		}
 		graphics.popState();
-		//*/
 	}
 }

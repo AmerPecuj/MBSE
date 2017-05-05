@@ -440,11 +440,14 @@ public class YawlPackageImpl extends EPackageImpl implements YawlPackage {
 		addEEnumLiteral(pTypeEEnum, PType.NORMAL);
 		addEEnumLiteral(pTypeEEnum, PType.START);
 		addEEnumLiteral(pTypeEEnum, PType.FINISH);
+		
 
 		initEEnum(tTypeEEnum, TType.class, "TType");
+		addEEnumLiteral(tTypeEEnum, TType.SINGLE);
 		addEEnumLiteral(tTypeEEnum, TType.AND);
 		addEEnumLiteral(tTypeEEnum, TType.XOR);
 		addEEnumLiteral(tTypeEEnum, TType.OR);
+		
 
 		initEEnum(aTypeEEnum, AType.class, "AType");
 		addEEnumLiteral(aTypeEEnum, AType.NORMAL);

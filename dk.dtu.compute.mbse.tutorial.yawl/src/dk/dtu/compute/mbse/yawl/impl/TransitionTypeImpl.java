@@ -36,7 +36,7 @@ public class TransitionTypeImpl extends AttributeImpl implements TransitionType 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TType TEXT_EDEFAULT = TType.AND;
+	protected static final TType TEXT_EDEFAULT = TType.SINGLE;
 
 	/**
 	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.

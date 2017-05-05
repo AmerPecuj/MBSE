@@ -26,7 +26,17 @@ public enum TType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	AND(0, "AND", "AND"),
+	SINGLE(0, "SINGLE", "SINGLE"),
+	
+	/**
+	 * The '<em><b>AND</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #AND_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	AND(1, "AND", "AND"),
 
 	/**
 	 * The '<em><b>XOR</b></em>' literal object.
@@ -36,7 +46,7 @@ public enum TType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	XOR(1, "XOR", "XOR"),
+	XOR(2, "XOR", "XOR"),
 
 	/**
 	 * The '<em><b>OR</b></em>' literal object.
@@ -46,7 +56,7 @@ public enum TType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	OR(2, "OR", "OR");
+	OR(3, "OR", "OR");
 
 	/**
 	 * The '<em><b>AND</b></em>' literal value.
@@ -61,7 +71,22 @@ public enum TType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int AND_VALUE = 0;
+	public static final int SINGLE_VALUE = 0;
+	
+	/**
+	 * The '<em><b>AND</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>AND</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #AND
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int AND_VALUE = 1;
 
 	/**
 	 * The '<em><b>XOR</b></em>' literal value.
@@ -76,7 +101,7 @@ public enum TType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int XOR_VALUE = 1;
+	public static final int XOR_VALUE = 2;
 
 	/**
 	 * The '<em><b>OR</b></em>' literal value.
@@ -91,7 +116,7 @@ public enum TType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int OR_VALUE = 2;
+	public static final int OR_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>TType</b></em>' enumerators.
@@ -101,6 +126,7 @@ public enum TType implements Enumerator {
 	 */
 	private static final TType[] VALUES_ARRAY =
 		new TType[] {
+			SINGLE,
 			AND,
 			XOR,
 			OR,
@@ -160,6 +186,7 @@ public enum TType implements Enumerator {
 	 */
 	public static TType get(int value) {
 		switch (value) {
+			case SINGLE_VALUE: return SINGLE;
 			case AND_VALUE: return AND;
 			case XOR_VALUE: return XOR;
 			case OR_VALUE: return OR;

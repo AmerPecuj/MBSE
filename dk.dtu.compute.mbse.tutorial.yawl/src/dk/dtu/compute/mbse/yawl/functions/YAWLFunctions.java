@@ -47,19 +47,21 @@ public class YAWLFunctions {
 	
 	public static TType[] getTypeTransition(Transition transition) {
 		TType[] types=new TType[2];
-		types[0]=TType.AND;
-		types[1]=TType.AND;
+		types[0]=TType.SINGLE;
+		types[1]=TType.SINGLE;
 		if (transition instanceof Transition) {
 			Transition YAWLTransition = (Transition) transition;
 			if(((dk.dtu.compute.mbse.yawl.Transition) YAWLTransition).getJoinType() != null) {
 				TransitionType type = ((dk.dtu.compute.mbse.yawl.Transition) YAWLTransition).getJoinType();
 				if(type.getText().equals(TType.OR)) types[0]=TType.OR;
 				else if(type.getText().equals(TType.XOR)) types[0]=TType.XOR;
+				else if(type.getText().equals(TType.AND)) types[0]=TType.AND;
 			}
 			if(((dk.dtu.compute.mbse.yawl.Transition) YAWLTransition).getSplitType() != null) {
 				TransitionType type = ((dk.dtu.compute.mbse.yawl.Transition) YAWLTransition).getSplitType();
 				if(type.getText().equals(TType.OR)) types[1]=TType.OR;
 				else if(type.getText().equals(TType.XOR)) types[1]=TType.XOR;
+				else if(type.getText().equals(TType.AND)) types[1]=TType.AND;
 			}
 			return types;
 		}

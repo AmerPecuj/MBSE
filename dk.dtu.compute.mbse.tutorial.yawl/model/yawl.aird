@@ -285,6 +285,10 @@
                 <styles xmi:type="notation:FontStyle" xmi:id="_P53LkQWDEeeVtKUB5ypA_A" fontName="Segoe UI" fontHeight="8"/>
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_P53LkgWDEeeVtKUB5ypA_A"/>
               </children>
+              <children xmi:type="notation:Node" xmi:id="_WcnygDG4Eee9TrchX4oa5A" type="3010" element="_WcXT0DG4Eee9TrchX4oa5A">
+                <styles xmi:type="notation:FontStyle" xmi:id="_WcnygTG4Eee9TrchX4oa5A" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_WcnygjG4Eee9TrchX4oa5A"/>
+              </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_Et63kgWDEeeVtKUB5ypA_A"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_Et63kwWDEeeVtKUB5ypA_A"/>
             </children>
@@ -1067,7 +1071,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_HS-OQAWDEeeVtKUB5ypA_A" name="text : TType = AND" tooltipText="">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_HS-OQAWDEeeVtKUB5ypA_A" name="text : TType = Single" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="yawl.ecore#//TransitionType/text"/>
           <semanticElements xmi:type="ecore:EAttribute" href="yawl.ecore#//TransitionType/text"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_MFeT8AWDEeeVtKUB5ypA_A" labelAlignment="LEFT">
@@ -1159,6 +1163,14 @@
           <target xmi:type="ecore:EEnumLiteral" href="yawl.ecore#//TType/OR"/>
           <semanticElements xmi:type="ecore:EEnumLiteral" href="yawl.ecore#//TType/OR"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_P49MoAWDEeeVtKUB5ypA_A" labelAlignment="LEFT">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_WcXT0DG4Eee9TrchX4oa5A" name="Single" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="yawl.ecore#//TType/Single"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="yawl.ecore#//TType/Single"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_WcXT0TG4Eee9TrchX4oa5A" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
