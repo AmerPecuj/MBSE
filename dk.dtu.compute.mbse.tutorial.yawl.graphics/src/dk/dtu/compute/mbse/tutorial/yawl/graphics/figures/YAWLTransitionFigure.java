@@ -2,14 +2,8 @@ package dk.dtu.compute.mbse.tutorial.yawl.graphics.figures;
 
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.geometry.Rectangle;
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.graphics.Color;
-import org.eclipse.swt.widgets.Display;
-import org.pnml.tools.epnk.gmf.extensions.graphics.figures.PlaceFigure;
 import org.pnml.tools.epnk.gmf.extensions.graphics.figures.TransitionFigure;
-import org.pnml.tools.epnk.pnmlcoremodel.Place;
 import org.pnml.tools.epnk.pnmlcoremodel.Transition;
-import dk.dtu.compute.mbse.yawl.PType;
 import dk.dtu.compute.mbse.yawl.TType;
 import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
 

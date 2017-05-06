@@ -44,9 +44,6 @@ public class YAWLGraphics extends GraphicalExtension {
 			results.add(YawlPackage.eINSTANCE.getArc());
 			results.add(YawlPackage.eINSTANCE.getPlace());
 			results.add(YawlPackage.eINSTANCE.getTransition());
-			// No graphical extension for places
-			// results.add((TechnicalPackage.eINSTANCE.getPlace());
-			// results.add(TechnicalPackage.eINSTANCE.getTransition());
 		}
 		return results;
 	}

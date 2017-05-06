@@ -102,52 +102,68 @@
             </constraint>
             <constraint
             	lang="Java"
-            		class="dk.dtu.compute.mbse.yawl.constraints.StartEmptyPreset"
-            		severity="ERROR"
-            		mode="Batch"
-            		name="Start place has empty preset"
-            		id="dk.dtu.compute.mbse.yawl.validation.start-condition-has-empty-preset"
-            		statusCode="403">
-            		<target class="Place:http://se.compute.dtu.dk/mbse/yawl"/>
-            		<description>
-            			A start condition must have an empty preset.
-            		</description>
-            		<message>
-            			The start condition {0} does not have an empty preset.
-        			</message>
-    			</constraint>
-    			<constraint
-    				lang="Java"
-            		class="dk.dtu.compute.mbse.yawl.constraints.EndEmptyPostset"
-            		severity="ERROR"
-            		mode="Batch"
-            		name="End place has empty preset"
-            		id="dk.dtu.compute.mbse.yawl.validation.end-condition-has-empty-preset"
-            		statusCode="404">
-            		<target class="Place:http://se.compute.dtu.dk/mbse/yawl"/>
-            		<description>
-            			A End condition must have an empty preset.
-            		</description>
-            		<message>
-            			The End condition {0} does not have an empty preset.
-        			</message>
-    			</constraint>
-    			<constraint
-    				lang="Java"
-            		class="dk.dtu.compute.mbse.yawl.constraints.NoDuplicateArcs"
-            		severity="ERROR"
-            		mode="Batch"
-            		name="No duplicate arcs"
-            		id="dk.dtu.compute.mbse.yawl.validation.no-duplicate-arcs"
-            		statusCode="405">
-            		<target class="Arc:http://se.compute.dtu.dk/mbse/yawl"/>
-            		<message>
-            			The arc {0} is a duplicate arc.
-        			</message>
-        			<description>
-            			Arcs of the same type are not allowed between the same nodes
-            		</description>
-    			</constraint>		
+        		class="dk.dtu.compute.mbse.yawl.constraints.StartEmptyPreset"
+        		severity="ERROR"
+        		mode="Batch"
+        		name="Start place has empty preset"
+        		id="dk.dtu.compute.mbse.yawl.validation.start-condition-has-empty-preset"
+        		statusCode="403">
+        		<target class="Place:http://se.compute.dtu.dk/mbse/yawl"/>
+        		<description>
+        			A start condition must have an empty preset.
+        		</description>
+        		<message>
+        			The start condition {0} does not have an empty preset.
+    			</message>
+			</constraint>
+			<constraint
+				lang="Java"
+        		class="dk.dtu.compute.mbse.yawl.constraints.EndEmptyPostset"
+        		severity="ERROR"
+        		mode="Batch"
+        		name="End place has empty preset"
+        		id="dk.dtu.compute.mbse.yawl.validation.end-condition-has-empty-preset"
+        		statusCode="404">
+        		<target class="Place:http://se.compute.dtu.dk/mbse/yawl"/>
+        		<description>
+        			A End condition must have an empty preset.
+        		</description>
+        		<message>
+        			The End condition {0} does not have an empty postset.
+    			</message>
+			</constraint>
+			<constraint
+				lang="Java"
+        		class="dk.dtu.compute.mbse.yawl.constraints.NoDuplicateArcs"
+        		severity="ERROR"
+        		mode="Batch"
+        		name="No duplicate arcs"
+        		id="dk.dtu.compute.mbse.yawl.validation.no-duplicate-arcs"
+        		statusCode="405">
+        		<target class="Arc:http://se.compute.dtu.dk/mbse/yawl"/>
+        		<message>
+        			The arc {0} is a duplicate arc.
+    			</message>
+    			<description>
+        			Arcs of the same type are not allowed between the same nodes
+        		</description>
+			</constraint>
+			<constraint
+				lang="Java"
+        		class="dk.dtu.compute.mbse.yawl.constraints.NoDeadEnds"
+        		severity="ERROR"
+        		mode="Batch"
+        		name="No dead ends"
+        		id="dk.dtu.compute.mbse.yawl.validation.no-dead-ends"
+        		statusCode="405">
+        		<target class="YAWLNet:http://se.compute.dtu.dk/mbse/yawl"/>
+        		<message>
+        			Non-start/non-finish places or transitions must have ingoing and outgoing arcs
+    			</message>
+    			<description>
+        			Every
+        		</description>
+			</constraint>
          </constraints>
       </constraintProvider>
    </extension>
