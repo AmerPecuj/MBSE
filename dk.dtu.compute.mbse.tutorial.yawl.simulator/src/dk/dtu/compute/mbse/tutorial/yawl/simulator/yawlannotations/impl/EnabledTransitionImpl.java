@@ -42,6 +42,27 @@ import org.pnml.tools.epnk.pnmlcoremodel.Transition;
  */
 public class EnabledTransitionImpl extends ObjectAnnotationImpl implements EnabledTransition {
 	/**
+	 * The cached value of the '{@link #getRefs() <em>Refs</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRefs()
+	 * @generated
+	 * @ordered
+	 * @author Ahmad
+	 */
+	protected EList<EnabledTransition> refs;
+
+	/**
+	 * @author Samil
+	 */
+	protected static final boolean ENABLED_EDEFAULT = false; 
+	
+	/**
+	 * @author Ahmad
+	 */
+	protected boolean enabled = ENABLED_EDEFAULT;
+
+	/**
 	 * The cached value of the '{@link #getResolved() <em>Resolved</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -278,4 +299,33 @@ public class EnabledTransitionImpl extends ObjectAnnotationImpl implements Enabl
 		return super.eIsSet(featureID);
 	}
 
+	/**
+	 * @author Ibrahim
+	 * @return
+	 */
+	public boolean isEnabled(){
+		return enabled;
+	}
+	
+	/**
+	 * @author Samil
+	 */
+	public void setEnabled(boolean newEnabled){
+		boolean oldEnabled = enabled;
+		enabled = newEnabled;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, YawlannotationsPackage.ENABLED_TRANSITION__ENABLED, oldEnabled, enabled));
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<EnabledTransition> getRefs() {
+		if (refs == null) {
+			refs = new EObjectWithInverseResolvingEList<EnabledTransition>(EnabledTransition.class, this, YawlannotationsPackage.ENABLED_TRANSITION__REFS, YawlannotationsPackage.ENABLED_TRANSITION__RESOLVED);
+		}
+		return refs;
+	}
 } //EnabledTransitionImpl

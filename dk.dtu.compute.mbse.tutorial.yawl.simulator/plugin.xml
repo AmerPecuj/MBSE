@@ -12,12 +12,4 @@
       </applicationfactory>
    </extension>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated yawlannotations -->
-      <package
-            uri="http://se.compute.dtu.dk/mbse/yawl/simulator"
-            class="dk.dtu.compute.mbse.tutorial.yawl.simulator.yawlannotations.YawlannotationsPackage"
-            genModel="model/yawlannotations.genmodel"/>
-   </extension>
-
 </plugin>

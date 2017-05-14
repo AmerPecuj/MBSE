@@ -104,7 +104,7 @@
             	lang="Java"
         		class="dk.dtu.compute.mbse.yawl.constraints.StartEmptyPreset"
         		severity="ERROR"
-        		mode="Batch"
+        		mode="Live"
         		name="Start place has empty preset"
         		id="dk.dtu.compute.mbse.yawl.validation.start-condition-has-empty-preset"
         		statusCode="403">
@@ -120,7 +120,7 @@
 				lang="Java"
         		class="dk.dtu.compute.mbse.yawl.constraints.EndEmptyPostset"
         		severity="ERROR"
-        		mode="Batch"
+        		mode="Live"
         		name="End place has empty preset"
         		id="dk.dtu.compute.mbse.yawl.validation.end-condition-has-empty-preset"
         		statusCode="404">
@@ -136,7 +136,7 @@
 				lang="Java"
         		class="dk.dtu.compute.mbse.yawl.constraints.NoDuplicateArcs"
         		severity="ERROR"
-        		mode="Batch"
+        		mode="Live"
         		name="No duplicate arcs"
         		id="dk.dtu.compute.mbse.yawl.validation.no-duplicate-arcs"
         		statusCode="405">
