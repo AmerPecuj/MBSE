@@ -38,20 +38,20 @@ import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
  *
  */
 public class YAWLSimulator extends ApplicationWithUIManager {
-	
+
 	private FlatAccess flatAccess;
 	private NetChangeListener adapter;
-	
+
 	public YAWLSimulator(PetriNet petrinet) {
 		super(petrinet);
 		flatAccess = FlatAccess.getFlatAccess(this.getPetrinet());
-		
+
 		getNetAnnotations().setName("A simple YAWL simulator");
 		ApplicationUIManager manager = this.getPresentationManager();
 		manager.addActionHandler(new EnabledTransitionHandler(this));
 		// manager.addActionHandler(new InvolvedArcHandler(this));
 		// manager.addPresentationHandler(new YAWLAnnotationsPresentationHandler());
-		
+
 		adapter = new NetChangeListener(this);
 		flatAccess.addInvalidationListener(adapter);
 	}
@@ -59,12 +59,12 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 	public FlatAccess getFlatAccess() {
 		return flatAccess;
 	}
-	
+
 	@Override
 	protected void initializeContents() {
 		NetMarking initialMarking = computeInitialMarking();
 		NetAnnotation initialAnnotation = computeAnnotation(initialMarking);
-		
+
 		this.getNetAnnotations().getNetAnnotations().add(initialAnnotation);
 		this.getNetAnnotations().setCurrent(initialAnnotation);
 	}
@@ -78,7 +78,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 		}
 		return marking;
 	}
-	
+
 	private NetMarking computeMarking() {
 		NetMarking marking = new NetMarking();
 		for (ObjectAnnotation annotation: this.getNetAnnotations().getCurrent().getObjectAnnotations()) {
@@ -94,11 +94,11 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 		}
 		return marking;
 	}
-	
+
 	private NetAnnotation computeAnnotation(NetMarking marking) {
 		NetAnnotation annotation = NetannotationsFactory.eINSTANCE.createNetAnnotation();
 		annotation.setNet(getPetrinet());
-		
+
 		for (Object object: getFlatAccess().getTransitions()) {
 			if (object instanceof Transition) {
 				Transition action = (Transition) object;
@@ -107,7 +107,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 					enabledTransition.setObject(action);
 					annotation.getObjectAnnotations().add(enabledTransition);
 					enabledTransition.setEnabled(true);
-					
+
 					for (RefTransition refTransition: getFlatAccess().getRefTransitions(action)) {
 						EnabledTransition enabledTransition2 = YawlannotationsFactory.eINSTANCE.createEnabledTransition();
 						enabledTransition2.setObject(refTransition);
@@ -118,7 +118,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 				}
 			}
 		}
-		
+
 		for (Place place: marking.getSupport()) {
 			int m= marking.getMarking(place);
 			if(m>0) {
@@ -126,7 +126,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 				mAnnotation.setObject(place);
 				mAnnotation.setValue(m);
 				annotation.getObjectAnnotations().add(mAnnotation);
-				
+
 				for(RefPlace refPlace: getFlatAccess().getRefPlaces(place)) {
 					Marking mAnnotation2 = YawlannotationsFactory.eINSTANCE.createMarking();
 					mAnnotation2.setObject(refPlace);
@@ -137,7 +137,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 		}
 		return annotation;
 	}
-	
+
 	boolean fireTransition(Transition action) {
 		NetMarking marking1 = this.computeMarking();
 
@@ -153,20 +153,31 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 		return false;
 	}
 
-	private NetMarking fireTransition(NetMarking marking1, Transition action) {
+	private NetMarking fireTransition(NetMarking marking1, Transition transition ) {
+		FlatAccess flatAccess= this.getFlatAccess();
 		NetMarking marking2 = new NetMarking(marking1);
-		
-		// consume tokens from preset
-		NetMarking consumes = consumes(action);
+		NetMarking consumes = consumes(transition);
 		marking2.subtract(consumes);
-				
-		// reset places on page connected to reset arc
-        // TODO
-		
-		// produce tokens on postset
-		NetMarking produces = produces(action);
+		for (Object a: flatAccess.getIn(transition)) {
+			if (a instanceof Arc && YAWLFunctions.getTypeArc((Arc) a) == AType.RESET) {
+				Arc arc = (Arc) a;
+				Node source = arc.getSource();
+				if (source instanceof Node) {
+					Node page = (Node) source;
+					for (Object object: page.getObject()) {
+						if (object instanceof PlaceNode) {
+							Object resolved =
+									flatAccess.resolve((PlaceNode) object);
+							if (resolved instanceof Place) {
+								marking2.setMarking((Place) resolved, 0);
+							}
+						}
+					}
+				}
+			}
+		}
+		NetMarking produces = produces(transition);
 		marking2.add(produces);
-		
 		return marking2;
 	}
 
@@ -174,11 +185,11 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 		NetMarking consumes = consumes(action);
 		return marking.isGreaterOrEqual(consumes);
 	}
-	
+
 	private NetMarking consumes(Transition action) {
 		NetMarking consumes = new NetMarking();
 		for (Arc arc: getFlatAccess().getIn(action)) {
-			if (arc instanceof Arc && YAWLFunctions.getTypeArc(arc) == AType.NORMAL ) {
+			if (arc instanceof Arc && YAWLFunctions.getTypeArc(arc) == AType.NORMAL) {
 				Node source = arc.getSource();
 				if(source instanceof PlaceNode) {
 					source=getFlatAccess().resolve((PlaceNode) source);
@@ -190,7 +201,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 		}
 		return consumes;
 	}
-	
+
 	private NetMarking produces(Transition transition) {
 		NetMarking produces = new NetMarking();
 		for (org.pnml.tools.epnk.pnmlcoremodel.Arc arc: getFlatAccess().getOut(transition)) {
@@ -213,7 +224,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 	@Override
 	protected void shutDown() {
 		super.shutDown();
-		
+
 		if (flatAccess != null && adapter != null) {
 			flatAccess.removeInvalidationListener(adapter);
 			adapter = null;

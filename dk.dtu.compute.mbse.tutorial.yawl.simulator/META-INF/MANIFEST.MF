@@ -19,3 +19,8 @@ Comment: TODO the dependency to org.pnml.tools.epnk.tutorials.app.simulator
          annotations
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: dk.dtu.compute.mbse.tutorial.yawl.simulator.yawlannotations,
+ dk.dtu.compute.mbse.tutorial.yawl.simulator.yawlannotations.impl,
+ dk.dtu.compute.mbse.tutorial.yawl.simulator.yawlannotations.util
+Import-Package: mbse.yawl.Yawl,
+ mbse.yawl.Yawl.helper

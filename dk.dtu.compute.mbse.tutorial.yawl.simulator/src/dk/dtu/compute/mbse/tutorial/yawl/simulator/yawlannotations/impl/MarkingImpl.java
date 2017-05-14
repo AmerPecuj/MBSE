@@ -95,19 +95,19 @@ public class MarkingImpl extends ObjectAnnotationImpl implements Marking {
 	 * @author Samil
 	 */
 	public EAttribute getAnnotationAttribute() {
-//		EClass eClass = this.eClass();
-//		Object feature = eClass.getEStructuralFeature("text");
-//		if (feature instanceof EAttribute) {
-//			return (EAttribute) feature;
-//		}
-//		feature = eClass.getEStructuralFeature("value");
-//		if (feature instanceof EAttribute) {
-//			return (EAttribute) feature;
-//		}
-//				
-//		for (EAttribute attribute: eClass.getEAllAttributes()) {
-//			return attribute;
-//		}
+		EClass eClass = this.eClass();
+		Object feature = eClass.getEStructuralFeature("text");
+		if (feature instanceof EAttribute) {
+			return (EAttribute) feature;
+		}
+		feature = eClass.getEStructuralFeature("value");
+		if (feature instanceof EAttribute) {
+			return (EAttribute) feature;
+		}
+				
+		for (EAttribute attribute: eClass.getEAllAttributes()) {
+			return attribute;
+		}
  		return YawlannotationsPackage.eINSTANCE.getMarking_Value();		
 //		return null;
 	}

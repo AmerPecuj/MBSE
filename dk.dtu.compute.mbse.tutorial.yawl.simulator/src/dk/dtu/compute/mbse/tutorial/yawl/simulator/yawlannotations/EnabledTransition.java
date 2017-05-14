@@ -122,5 +122,16 @@ public interface EnabledTransition extends ObjectAnnotation {
 	 * @generated
 	 */
 	void setEnabled(boolean value);
+	
+	/**
+	 * Sets the value of the '{@link org.pnml.tools.epnk.tutorials.app.simulator.techsimannotations.EnabledTransition#isEnabled <em>Enabled</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Enabled</em>' attribute.
+	 * @see #isEnabled()
+	 * @generated NOT
+	 * @author Ahmad
+	 */
+	EList<EnabledTransition> getRefs();
 
 } // EnabledTransition
