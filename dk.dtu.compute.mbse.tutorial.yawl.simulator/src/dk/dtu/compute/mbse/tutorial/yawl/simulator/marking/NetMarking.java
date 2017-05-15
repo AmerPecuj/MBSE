@@ -3,10 +3,7 @@ package dk.dtu.compute.mbse.tutorial.yawl.simulator.marking;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.eclipse.core.runtime.Assert;
-
-// TODO Condition is in probably dk.dtu.compute.mbse.yawl.Place in your cases
 import dk.dtu.compute.mbse.yawl.Place;
 
 

@@ -13,7 +13,9 @@ Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.pnml.tools.epnk.annotations;bundle-version="1.1.0";visibility:=reexport,
  org.pnml.tools.epnk;visibility:=reexport,
  org.pnml.tools.epnk.applications;bundle-version="1.1.2",
- dk.dtu.compute.mbse.tutorial.yawl;bundle-version="0.1.0"
+ dk.dtu.compute.mbse.tutorial.yawl;bundle-version="0.1.0",
+ yawl.simulator.annotations,
+ org.eclipse.gmf.runtime.diagram.ui
 Comment: TODO the dependency to org.pnml.tools.epnk.tutorials.app.simulator
          should eventually be deleted; the YAWL simulator should define its own
          annotations
@@ -22,5 +24,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: dk.dtu.compute.mbse.tutorial.yawl.simulator.yawlannotations,
  dk.dtu.compute.mbse.tutorial.yawl.simulator.yawlannotations.impl,
  dk.dtu.compute.mbse.tutorial.yawl.simulator.yawlannotations.util
-Import-Package: mbse.yawl.Yawl,
- mbse.yawl.Yawl.helper
+Import-Package: dk.dtu.compute.mbse.petrinet,
+ mbse.yawl.Yawl,
+ mbse.yawl.Yawl.helper,
+ org.eclipse.gef.editparts
