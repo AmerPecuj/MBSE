@@ -29,7 +29,11 @@ public class YAWLFunctions {
 		}
 		return PType.NORMAL;
 	}
-
+	/**
+	 * 
+	 * @author Ibrahim Al-Bacha & Samil Batir
+	 * @sid s118016 & s153191
+	 */
 	public static AType getTypeArc(Arc arc) {
 		if (arc instanceof Arc) {
 			Arc YAWLArc = (Arc) arc;
@@ -45,6 +49,11 @@ public class YAWLFunctions {
 		return AType.NORMAL;
 	}
 	
+	/**
+	 * 
+	 * @author Ahmad Almajedi og Amer ali
+	 * @sid s153317 & 
+	 */
 	public static TType[] getTypeTransition(Transition transition) {
 		TType[] types=new TType[2];
 		types[0]=TType.SINGLE;

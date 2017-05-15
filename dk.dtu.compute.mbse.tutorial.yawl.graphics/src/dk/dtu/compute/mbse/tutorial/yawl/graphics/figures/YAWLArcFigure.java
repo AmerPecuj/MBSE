@@ -18,7 +18,8 @@ import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
  * The figure defining implementing the graphical appearance of arcs in the
  * Technical Net Type.
  * 
- * @author ekki@dtu.dk
+ * @author Sigbatullah Samil Batir & Amer Ali
+ * @Sid s153191 & s145224
  * 
  */
 public class YAWLArcFigure extends ArcFigure {

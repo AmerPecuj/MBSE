@@ -10,7 +10,12 @@ import org.pnml.tools.epnk.helpers.NetFunctions;
 import dk.dtu.compute.mbse.yawl.PType;
 import dk.dtu.compute.mbse.yawl.Place;
 import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
-
+/**
+ * 
+ * @author Sigbatullah Samil Batir
+ * @sid s153191
+ *
+ */
 public class StartEmptyPreset extends AbstractModelConstraint{
 
 	@Override

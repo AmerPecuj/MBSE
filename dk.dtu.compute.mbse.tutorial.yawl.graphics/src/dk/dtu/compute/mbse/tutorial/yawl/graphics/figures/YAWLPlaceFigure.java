@@ -68,6 +68,11 @@ public class YAWLPlaceFigure extends PlaceFigure {
 			graphics.drawPolygon(new int[]{x1,y1, x2,y2, x3,y3});
 			graphics.popState();
 		}
+		/**
+		 * this is for the Place finish
+		 * @Author Ahmad Almajedi
+		 * @sid s153317
+		 */
 		else if(type.equals(PType.FINISH)){
 			graphics.pushState();
 			Display display = Display.getCurrent();

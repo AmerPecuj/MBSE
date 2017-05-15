@@ -36,7 +36,11 @@ public class YAWLGraphics extends GraphicalExtension {
 		results.add(YawlPackage.eINSTANCE.getYAWLNet());
 		return results;
 	}
-
+	/**
+	 * edited the generated code
+	 * @Author Sigbatullah Samil Batir
+	 * @sid s153191
+	 */
 	@Override
 	public List<EClass> getExtendedNetObjects(EClass netType) {
 		ArrayList<EClass> results = new ArrayList<EClass>();
@@ -63,7 +67,10 @@ public class YAWLGraphics extends GraphicalExtension {
 		}
 		return null;
 	}
-	
+	/**
+	 * @Author Ibrahim Al-Bacha
+	 * @sid s118016
+	 */
 	@Override
 	public IUpdateableFigure createTransitionFigure(Transition transition) {
 		if (transition instanceof dk.dtu.compute.mbse.yawl.Transition) {

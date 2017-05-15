@@ -12,7 +12,12 @@ import dk.dtu.compute.mbse.yawl.Place;
 import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
 import org.pnml.tools.epnk.pnmlcoremodel.PetriNet;
 import dk.dtu.compute.mbse.yawl.YAWLNet;
-
+/**
+ * 
+ * @author Amer Ali & Ahmad Almajedi
+ * @sid s145224 & s153317
+ *
+ */
 public class StartEndConditions extends AbstractModelConstraint {
 	
 	@Override
@@ -48,5 +53,5 @@ public class StartEndConditions extends AbstractModelConstraint {
 			}
 		}
 		return ctx.createSuccessStatus();
-	}
+}
 }

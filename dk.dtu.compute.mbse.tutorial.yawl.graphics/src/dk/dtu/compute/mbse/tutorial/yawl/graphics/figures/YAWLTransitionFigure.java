@@ -8,12 +8,9 @@ import dk.dtu.compute.mbse.yawl.TType;
 import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
 
 /**
- * The figure defining implementing the graphical appearance of transitions in the
- * Technical Net Type. The transitions will be shown with a cross in on the
- * left or ride side of the transition if the transition does not have NORMAL
- * incoming or outgoing arcs.
  * 
- * @author ekki@dtu.dk
+ * @author Ahmad Almajedi and Ibrahim Al-Bacha
+ * @sid s153317 & s118016
  * 
  */
 public class YAWLTransitionFigure extends TransitionFigure {

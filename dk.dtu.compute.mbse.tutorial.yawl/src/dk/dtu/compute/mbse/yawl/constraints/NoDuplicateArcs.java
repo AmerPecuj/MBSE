@@ -13,7 +13,12 @@ import dk.dtu.compute.mbse.yawl.AType;
 import dk.dtu.compute.mbse.yawl.Arc;
 import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
 
-
+/**
+ * 
+ * @author Ibrahim Al-Bacha & Amer Ali
+ * @sid s118016 & s145224
+ *
+ */
 public class NoDuplicateArcs extends AbstractModelConstraint {
 	public IStatus validate(IValidationContext ctx) {
 		EObject object = ctx.getTarget();

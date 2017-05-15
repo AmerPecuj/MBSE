@@ -11,6 +11,13 @@ import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
 import org.pnml.tools.epnk.helpers.FlatAccess;
 import org.pnml.tools.epnk.helpers.NetFunctions;
 
+
+/**
+ * 
+ * @author Ibrahim Al-Bacha
+ * @sid s118016
+ *
+ */
 public class EndEmptyPostset extends AbstractModelConstraint{
 
 	@Override

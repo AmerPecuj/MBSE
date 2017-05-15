@@ -15,6 +15,12 @@ import org.pnml.tools.epnk.pnmlcoremodel.PetriNet;
 import dk.dtu.compute.mbse.yawl.YAWLNet;
 import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
 
+/**
+ * check if there is a dead end --> that it dosent finish with a PlaceFinish
+ * @author Ahmad Almajedi
+ * @sid s153317
+ *
+ */
 public class NoDeadEnds extends AbstractModelConstraint {
 	
 	@Override
