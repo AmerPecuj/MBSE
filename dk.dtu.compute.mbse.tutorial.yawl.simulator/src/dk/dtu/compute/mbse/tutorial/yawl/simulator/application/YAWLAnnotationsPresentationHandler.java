@@ -16,6 +16,10 @@ import yawlannotations.SelectArc;
 
 public class YAWLAnnotationsPresentationHandler implements IPresentationHandler {
 
+	/***
+	 * @author Ibrahim Al-Bacha
+	 * @sid s118016
+	 */
 	@Override
 	public IFigure handle(ObjectAnnotation annotation, AbstractGraphicalEditPart editPart) {
 		if (annotation instanceof EnabledTransition) {

@@ -32,7 +32,11 @@ public class EnabledTransitionHandler implements IActionHandler {
 		super();
 		this.application = application;	
 	}
-
+	
+	/***
+	 * @author Sibgatullah Samil Batir
+	 * @sid s153191
+	 */
 	@Override
 	public boolean mouseDoubleClicked(MouseEvent arg0, ObjectAnnotation annotation) {
 		NetAnnotations netAnnotations = application.getNetAnnotations();
@@ -56,31 +60,13 @@ public class EnabledTransitionHandler implements IActionHandler {
 				}
 			}
 		}
-		/*/
-		if (current.getObjectAnnotations().contains(annotation)) {
-			Object object = annotation.getObject();
-			if (object instanceof TransitionNode) {
-				object = NetFunctions.resolve((TransitionNode) object);
-			}
-			if (object instanceof Transition && annotation instanceof EnabledTransition) {
-				Transition transition = (Transition) object;
-				EnabledTransition enabledTransition = (EnabledTransition) annotation;
-				
-				if (enabledTransition.isEnabled()) {
-					
-					// TODO eventually, you need to compute the selected arcs for
-					//      XOR-joins and XOR-splits and OR-splits so that the
-					//      tokens are produced and consumed on the respective arcs
-					//      (see project org.pnml.tools.epnk.tutorials.app.simulator)
-
-					return application.fireTransition(transition);
-				}
-			}
-		}
-		//*/
 		return false;
 	}
 
+	/***
+	 * @author Sibgatullah Samil Batir
+	 * @sid s153191
+	 */
 	private Arc selectedInArc(EnabledTransition enabledTransition) {
 		EnabledTransition resolved = enabledTransition.getResolved();
 		if(resolved==null) resolved=enabledTransition;
@@ -93,6 +79,10 @@ public class EnabledTransitionHandler implements IActionHandler {
 		return null;
 	}
 	
+	/***
+	 * @author Sibgatullah Samil Batir
+	 * @sid s153191
+	 */
 	private Collection<Arc> selectedOutArcs(EnabledTransition enabledTransition) {
 		EnabledTransition resolved = enabledTransition.getResolved();
 		if(resolved==null) resolved=enabledTransition;

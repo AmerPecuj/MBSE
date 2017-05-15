@@ -23,6 +23,10 @@ public class SelectArcHandler implements IActionHandler {
 		return false;
 	}
 
+	/**
+	 * @author Ahmad Almajedi
+	 * @sid s153317
+	 */
 	@Override
 	public boolean mousePressed(MouseEvent arg0, ObjectAnnotation annotation) {
 		if (annotation instanceof SelectArc) {
@@ -74,45 +78,6 @@ public class SelectArcHandler implements IActionHandler {
 			}
 		}
 		return false;
-		/*
-		if (annotation instanceof SelectArc) {
-			SelectArc selectArc = (SelectArc) annotation;
-			EnabledTransition parentTransition = selectArc.getSourceTransition();
-			NetAnnotations netAnnotations = application.getNetAnnotations();
-			NetAnnotation current = netAnnotations.getCurrent();	
-
-			if (current.getObjectAnnotations().contains(parentTransition)) {
-				Object object = parentTransition.getObject();
-
-				if (object instanceof Transition) {
-					Transition transition = (Transition) object;
-					if (transition.getSplitType().getText() == TType.OR || transition.getSplitType().getText() == TType.XOR) {
-						getArcsList(parentTransition.getOutArcs(), selectArc, transition);
-					} else {
-						selectArc.setSelected(!selectArc.isSelected());
-					}
-				}
-			}
-			parentTransition = selectArc.getTargetTransition();
-			if (current.getObjectAnnotations().contains(parentTransition)) {
-				Object object = parentTransition.getObject();
-
-				if (object instanceof Transition) {
-					Transition transition = (Transition) object;
-
-					if (transition.getJoinType().getText() == TType.OR || transition.getJoinType().getText() == TType.XOR) {
-						getArcsList(parentTransition.getInArcs(), selectArc, transition);
-					} else {
-						selectArc.setSelected(!selectArc.isSelected());
-					}
-				}
-			}
-			application.update();
-
-			return true;
-		}
-		return false;
-		*/
 	}
 
 	@Override

@@ -103,6 +103,10 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 		return marking;
 	}
 	
+	/**
+	 * @author Amer Ali & Ahmad Almajedi
+	 * @sid s145224 & s153317
+	 */
 	NetAnnotation computeAnnotation(NetMarking marking) {
 		FlatAccess flatAccess=this.getFlatAccess();
 		NetAnnotation annotation = NetannotationsFactory.eINSTANCE.createNetAnnotation();
@@ -188,6 +192,10 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 		return annotation;
 	}
 	
+	/**
+	 * @author Ibrahim Al-Bacha & Samil Batir
+	 * @sid s118016 & s153191
+	 */
 	NetMarking fireTransition(FlatAccess flatNet, NetMarking marking1, Arc selectedInArc, Transition transition, Collection<Arc> selectedOutArcs) {
 		//*
 		NetMarking marking2=new NetMarking(marking1);
@@ -281,25 +289,16 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 				}
 			}
 		}
-		/*/
-		NetMarking marking2 = new NetMarking(marking1);
-		
-		// consume tokens from preset
-		NetMarking consumes = consumes(transition);
-		marking2.subtract(consumes);
-				
-		// reset places on page connected to reset arc
-        // TODO
-		
-		// produce tokens on postset
-		NetMarking produces = produces(transition);
-		marking2.add(produces);
-		//*/
 		return marking2;
 	}
 
+	/**
+	 * 
+	 * @author Ibrahim Al-Bacha
+	 * @sid s118016
+	 *
+	 */
 	boolean isEnabled(FlatAccess flatNet, NetMarking marking, Transition transition) {
-		//*
 		TType joinType = transition.getJoinType().getText();
 		if(joinType.equals(TType.AND) || joinType.equals(TType.SINGLE)) {
 			for(Object in: flatNet.getIn(transition)) {
@@ -337,16 +336,12 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 			}
 			return false;
 		}
-		/*/
-		NetMarking consumes = consumes(transition);
-		return marking.isGreaterOrEqual(consumes);
-		//*/
 		return false;
 	}
 
-	private NetMarking consumes(Transition action) {
+	private NetMarking consumes(Transition Transition) {
 		NetMarking consumes = new NetMarking();
-		for (Arc arc: getFlatAccess().getIn(action)) {
+		for (Arc arc: getFlatAccess().getIn(Transition)) {
 			if (arc instanceof Arc && YAWLFunctions.getTypeArc(arc) == AType.NORMAL) {
 				Node source = arc.getSource();
 				if(source instanceof PlaceNode) {
